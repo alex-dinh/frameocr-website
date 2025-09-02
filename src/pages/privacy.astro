@@ -1,0 +1,247 @@
+---
+// src/pages/Privacy.astro
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Privacy Policy">
+    <div id="privacy" class="space-y-6">
+        <h1 class="text-3xl font-bold mb-6 text-center">Privacy Policy</h1>
+        <div>
+            This document outlines the Privacy Policy of "FrameOCR" macOS desktop app,
+            and applies to the most recent version of the app. By using FrameOCR, you
+            acknowledge and agree to the terms of this Privacy Policy.
+        </div>
+         <div class="divider"></div>
+        <div>
+            <h2 class="text-xl font-semibold">Required macOS Permissions</h2>
+            <p class="mt-2">
+                <b>Screen Recording.</b> To function correctly, FrameOCR requires macOS Screen
+                Recording permission to take screenshots. All screenshots taken by Shottr
+                belong to the user and are controlled by the user. Screenshots are stored
+                and processed locally on the user's device, and any information derived from
+                the screenshots never leaves the user’s device unless the user engages the
+                "Upload" feature (see the Screenshot Uploading Privacy Policy).
+                
+                <br /><br />
+                
+                <b>Text Recognition (OCR).</b> When the user engages the OCR feature, text
+                recognition happens locally on the user's computer, both the image and the
+                recognized text are never transferred over the internet by Shottr.
+                
+                <br /><br />
+                
+                <b>Notification Permissions.</b> Notification Permissions are required only
+                if the user wishes FrameOCR to notify them when OCR recognition has finished
+                processing.
+                
+                <!-- Permission to access the folder. Permission to access the folder is only 
+                required if the user saves screenshots. -->
+            </p>
+        </div>
+         <div class="divider"></div>
+        <div>
+            <h2 class="text-xl font-semibold">
+                Internet Connection and Data Transfer
+            </h2>
+            <p class="mt-2">
+                FrameOCR uses the internet connection for various tasks (see the list
+                below). FrameOCR does require internet connection to validate the
+                license key number; other than that FrameOCR will operate correctly on
+                computers that don't have an internet connection, or if the user
+                restricts its access to the internet using third-party tools.
+            </p>
+            <br/>
+            FrameOCR may contact frameocr.cc server on the following occasions:
+            <ul class="list-disc list-inside mt-2 space-y-1">
+                <li>To validate or revalidate the license number.</li>
+                <!-- <li>
+                    If the user engages the “Upload” feature (see the Screenshot Uploading
+                    Privacy Policy).
+                </li> -->
+                <li>
+                    On app launch and once every few days FrameOCR checks
+                    <code>https://frameocr.cc/api/version.json</code> for information about
+                    update availability. If a new version is found, FrameOCR will offer the
+                    user to download the update, but will not perform the update without the
+                    user's confirmation.
+                </li>
+                <li>
+                    FrameOCR reaches the telemetry endpoint to send diagnostic information
+                    to frameocr.cc if the appropriate setting is turned on in the app
+                    Preferences.
+                </li>
+            </ul>
+        </div>
+         <div class="divider"></div>
+        <!-- <div>
+            <h2 class="text-xl font-semibold">Telemetry and Other Data Collection</h2>
+            <p class="mt-2">
+                Anonymized information may be captured and transmitted to the
+                frameocr.cc server, including but not limited to:
+            </p>
+            <ul class="list-disc list-inside mt-2 space-y-1">
+                <li>Performance metrics</li>
+                <li>Error codes</li>
+                <li>Frequency and parameters of feature usage</li>
+                <li>Randomly generated computer identifier</li>
+                <li>OS version</li>
+                <li>Screen resolution and number of external screens</li>
+                <li>Internationalization preferences and timezone</li>
+                <li>App version</li>
+                <li>App preferences that don’t contain private information</li>
+            </ul>
+            <p class="mt-2">
+                The user license number is not included into the diagnostics data
+                stream, but is transmitted to the server for the license verification
+                purposes. The upload token is not included into the diagnostics data
+                stream, but is transmitted when the image is being uploaded online.
+            </p>
+            <p class="mt-2">
+                The application doesn't have access to the user email, name, and address
+                — this information will never be transmitted as part of the telemetry
+                data stream. No images are ever transmitted as part of the telemetry
+                data stream. The text that the user provides (by typing in the
+                application or by recognizing it from the image) is never included in
+                the telemetry data stream.
+            </p>
+            <p class="mt-2">
+                When the telemetry collection is turned off, one final report to the
+                server is made signaling that the data collection will stop. When
+                telemetry is off, events may still be recorded locally on the user’s
+                computer, but they won’t be sent to the server.
+            </p>
+            <p class="mt-2">
+                When the diagnostics telemetry is turned off, the app stops sharing
+                diagnostics information, but continues using endpoints to check for
+                updates, verify license information and upload images when the upload
+                feature is engaged; some information (including, but not limited to:
+                license number, upload token) will be passed to the server as part of
+                this process.
+            </p>
+            <p class="mt-2">
+                The collected information is solely used to provide service, develop and
+                further improve the app.
+            </p>
+        </div>
+         -->
+        <div>
+            <h2 class="text-xl font-semibold">Personal Identifiable Information</h2>
+            <p class="mt-2">
+                When the user purchases the license number for the app, their name,
+                address, phone number and credit card information are collected and
+                processed by the payment processing company (FastSpring.com). This
+                information is treated with the utmost confidentiality and is not shared
+                with third parties, except as required by law.
+            </p>
+            <p class="mt-2">
+                The frameocr.cc server does not store or process name, phone number,
+                address, or credit card information associated with the transaction. It
+                does process and store the email address associated with the license key
+                number for the purposes of processing the transaction and providing
+                customer support.
+            </p>
+            <p class="mt-2">
+                The frameocr.cc server also processes and stores the user's email
+                address if the user applies for an upload token and uses the Upload
+                feature (see the Screenshot Uploading Privacy Policy).
+            </p>
+            <p class="mt-2">
+                FrameOCR (the application) stores the license number when it's entered
+                by the user, and every copy of the app generates and stores a random
+                alphanumeric code that is used for analytics and tracking license number
+                activations. The app does not receive, process or store user email,
+                name, address, phone number or credit card information.
+            </p>
+            <p class="mt-2">
+                Additionally, the frameocr.cc server stores user email if the user
+                subscribes to the newsletter, reports a bug, files a suggestion, or
+                applies for an upload token.
+            </p>
+        </div>
+         <div class="divider"></div>
+        <div>
+            <h2 class="text-xl font-semibold">IP Address</h2>
+            <p class="mt-2">
+                frameocr.cc server endpoints don’t intentionally store the user’s IP
+                address, however, the IP address may be temporarily stored in the Apache
+                log files. Apache log files aren’t being analyzed, processed, or mapped
+                on the telemetry data.
+            </p>
+        </div>
+         <div class="divider"></div>
+        <div>
+            <h2 class="text-xl font-semibold">Third Parties</h2>
+            <p class="mt-2">
+                Information collected by FrameOCR is not shared with third parties.
+                frameocr.cc may use the following third-party services:
+            </p>
+            <ul class="list-disc list-inside mt-2 space-y-1">
+                <li>Amazon AWS</li>
+                <li>Google GCP</li>
+                <li>Cloudflare</li>
+                <li>Supabase</li>
+                <li>FastSpring</li>
+                <li>EmailOctopus</li>
+                <li>Mailgun</li>
+                <li>Buy Me A Coffee</li>
+                <li>HelpScout</li>
+            </ul>
+        </div>
+         <div class="divider"></div>
+        <!-- <div>
+            <h2 class="text-xl font-semibold">
+                Privacy Policy for the Upload Functionality
+            </h2>
+            <p class="mt-2">
+                Screenshot Upload is an experimental feature. The upload feature is only
+                available to the users that have the access token. The following Privacy
+                Policy only applies to the users who entered their access token in
+                FrameOCR.
+            </p>
+            <p class="mt-2">
+                The following user information will be collected and stored in exchange
+                for the access token:
+            </p>
+            <ul class="list-disc list-inside mt-2 space-y-1">
+                <li>User email</li>
+                <li>User name</li>
+                <li>User’s consent to Terms and Conditions</li>
+            </ul>
+            <p class="mt-2">
+                The following information will be collected and stored every time the
+                user uploads a screenshot:
+            </p>
+            <ul class="list-disc list-inside mt-2 space-y-1">
+                <li>The image that is being uploaded</li>
+                <li>Timestamp</li>
+                <li>User id linked to the user’s email and name</li>
+                <li>Computer id</li>
+            </ul>
+            <p class="mt-2">
+                The user can access all uploaded screenshots on the frameocr.cc server
+                by choosing “Manage Uploads” in the FrameOCR main menu. The user may
+                remove uploaded images with the Delete icon on the Manage Uploads page
+                (the image will be permanently removed). The user may also request
+                complete removal of their information by contacting the developer at <a
+                href="mailto:max@frameocr.cc"
+                class="text-blue-600">max@frameocr.cc</a
+                >
+                (access token will be deactivated, all uploads removed, and the email erased
+                from the database).
+            </p>
+            <p class="mt-2">
+                The uploaded images are considered public, and are available to anyone
+                who has the exact screenshot URL.
+            </p>
+        </div> -->
+    </div>
+</Layout>
+
+<style>
+    #privacy {
+        width: 35vw;
+        min-width: 550px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+</style>
