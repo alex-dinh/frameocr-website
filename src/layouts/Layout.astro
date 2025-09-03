@@ -27,9 +27,9 @@ import LogoSVG from "../assets/frameocr-logo.svg";
     <!-- Top Navigation Bar -->
     <body>
         <div class="navbar bg-base-200">
-            <div class="navbar-start">
-                <a href="/" class="btn btn-ghost">
-                    <LogoSVG width="250" />
+            <div class="navbar-start" id="header-logo">
+                <a href="/" class="btn btn-ghost px-2 py-1 h-auto min-h-0">
+                    <LogoSVG class="h-10 w-auto" />
                 </a>
             </div>
 
@@ -82,3 +82,11 @@ import LogoSVG from "../assets/frameocr-logo.svg";
         <Footer />
     </body>
 </html>
+
+
+<style>
+    #header-logo {
+        width: 250;
+        /* margin-left:  */
+    }
+</style>
