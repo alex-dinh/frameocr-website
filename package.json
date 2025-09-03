@@ -3,8 +3,8 @@
   "type": "module",
   "version": "0.0.1",
   "prettier": {
-        "tabWidth": 4,
-        "useTabs": false
+    "tabWidth": 4,
+    "useTabs": false
   },
   "scripts": {
     "dev": "astro dev",
@@ -19,6 +19,7 @@
     "theme-change": "^2.5.0"
   },
   "devDependencies": {
-    "daisyui": "^5.0.50"
+    "daisyui": "^5.0.50",
+    "wrangler": "^4.33.2"
   }
 }

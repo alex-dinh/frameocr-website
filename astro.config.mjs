@@ -7,8 +7,6 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
-  },
-  site: 'https://alex-dinh.github.io',
-  base: '/frameocr-website',
+  }
 });
 
