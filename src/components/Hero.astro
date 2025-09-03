@@ -1,0 +1,54 @@
+---
+import LogoSVG from '../assets/frameocr-logo.svg';
+
+---
+
+<div id="hero-block" class="flex flex-col items-center text-center">
+    <LogoSVG id="hero-logo"/>
+    <p id="hero-text" class="py-0 mb-8">
+        Instantly recognize and extract text and LaTeX from images and documents on your Mac.
+        State-of-the-art OCR performance powered by AI, tailored for each use case.
+    </p>
+    <button id="download-button" class="btn btn-primary btn-lg min-h-[4rem]">
+        Download FrameOCR for Mac
+        <p class="text-med font-normal">(v1.0.0, 181.5 MB)</p>
+    </button>
+</div>
+
+<style>
+    #hero-block {
+        padding-top: 125px;
+        padding-bottom: 125px;
+    }
+
+    #hero-logo {
+        width: 45%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    #hero-text {
+        width: 50%;
+        margin: 0 auto;
+        padding: 10px;
+        padding-bottom: 20px;
+    }
+
+    #download-button {
+        margin: 0 auto;
+    }
+
+    @media (max-width: 1000px) {
+        #hero-logo {
+            width: 80%;
+        }
+
+        #hero-text {
+            width: 85%;
+        }
+
+        .divider {
+            width: 90%;
+        }
+    }
+</style>

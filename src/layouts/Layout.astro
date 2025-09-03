@@ -1,7 +1,7 @@
 ---
 // src/layouts/Layout.astro
 interface Props {
-	title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
@@ -13,56 +13,72 @@ import LogoSVG from "../assets/frameocr-logo.svg";
 <!doctype html>
 <!-- Modify theme here -->
 <html lang="en" data-theme="light">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="A simple and powerful OCR tool for macOS." />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/frameocr.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="description"
+            content="A simple and powerful OCR tool for macOS."
+        />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/frameocr.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
     <!-- Top Navigation Bar -->
-	<body>
-		<div class="navbar bg-base-200">
+    <body>
+        <div class="navbar bg-base-200">
             <div class="navbar-start">
-              <a href="/" class="btn btn-ghost">
-                <LogoSVG width="250" />
-              </a>
+                <a href="/" class="btn btn-ghost">
+                    <LogoSVG width="250" />
+                </a>
             </div>
-          
+
             <!-- Mobile Dropdown Toggle -->
             <div class="navbar-end lg:hidden">
-              <div class="dropdown dropdown-end">
-                <label tabindex="0" class="btn btn-ghost">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
-                       viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                          stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                  </svg>
-                </label>
-                <ul tabindex="0" class="menu dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                  <li><a href="#release-notes">Release Notes</a></li>
-                  <li><a href="#faq">FAQ</a></li>
-                  <li><a href="/">Try for Free</a></li>
-                  <li><a href="/" class="btn btn-primary mt-2">Buy Now</a></li>
-                </ul>
-              </div>
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </label>
+                    <ul
+                        tabindex="0"
+                        class="menu dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                    >
+                        <li><a href="#release-notes">Release Notes</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="/">Try for Free</a></li>
+                        <li>
+                            <a href="/" class="btn btn-primary mt-2">Buy Now</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          
+
             <!-- Desktop Menu -->
             <div class="navbar-end hidden lg:flex gap-2">
-              <a href="/#release-notes" class="btn btn-ghost">Release Notes</a>
-              <a href="/#faq" class="btn btn-ghost">FAQ</a>
-              <a href="/" class="btn btn-ghost">Try for Free</a>
-              <div class="divider divider-horizontal mx-1"></div>
-              <a href="/" class="btn btn-primary">Buy Now</a>
+                <a href="/#release-notes" class="btn btn-ghost">Release Notes</a>
+                <a href="/#faq" class="btn btn-ghost">FAQ</a>
+                <a href="/" class="btn btn-ghost">Try for Free</a>
+                <div class="divider divider-horizontal mx-1"></div>
+                <a href="/" class="btn btn-primary">Buy Now</a>
             </div>
-          </div>
+        </div>
 
-		<main class="container mx-auto p-8">
-			<slot />
-		</main>
+        <main class="container mx-auto p-8">
+            <slot />
+        </main>
 
-        <Footer/>
-	</body>
+        <Footer />
+    </body>
 </html>

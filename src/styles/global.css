@@ -2,3 +2,30 @@
 @plugin "daisyui" {
     themes: emerald --default;
 }
+
+.landing-section {
+    width: 45%;
+    margin: 0 auto;
+}
+
+/* Horizontal Divider */
+.hdivider {
+    background-color: #333c4d1a;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 2px;
+}
+
+/* For mobile screens */
+@media (max-width: 1000px) {
+    .landing-section {
+        width: 90%;
+    }
+
+    .hdivider {
+        width: 90%;
+    }
+}
+

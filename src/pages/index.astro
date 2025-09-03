@@ -1,54 +1,18 @@
-<!-- ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
----
-
-<Layout>
-	<Welcome />
-</Layout> -->
 ---
 // src/pages/index.astro
 import Layout from '../layouts/Layout.astro';
-import LogoSVG from '../assets/frameocr-logo.svg';
+import Hero from '../components/Hero.astro';
 import DemoVideo from '../components/DemoVideo.astro';
 import ReleaseNotes from '../components/ReleaseNotes.astro';
 import FAQ from '../components/FAQ.astro';
-import { ACTION_ERROR_CODES } from 'astro:actions';
 ---
 
 <Layout title="FrameOCR">
-	<div class="hero min-h-[60vh] bg-base-100 rounded-lg">
-		<div class="hero-content text-center flex flex-col items-center">
-			<!-- Centered SVG Logo -->
-			<div class="max-w-md">
-                <LogoSVG  class="max-w-md"/>
-				<p class="py-0 mb-8">
-					Instantly recognize and extract text and LaTeX from images and documents on your Mac.
-					State-of-the-art OCR performance powered by AI, tailored for each use case.
-				</p>
-				<!-- <button class="btn btn-primary btn-lg">Buy FrameOCR</button> -->
-				<button class="btn btn-primary btn-lg min-h-[4rem] leading-snug">
-                    Download FrameOCR for Mac
-                    <span class="text-med font-normal">(v1.0.0, 181.5 MB)</span>
-                </button>
-			</div>
-		</div>
-	</div>
-     <div class="divider"></div>
+	<Hero />
+     <div class="hdivider"></div>
     <DemoVideo/>
-     <div class="divider"></div>
+     <div class="hdivider"></div>
     <ReleaseNotes/>
-     <div class="divider"></div>
+     <div class="hdivider"></div>
     <FAQ/>
 </Layout>
-
-<style>
-    #divider {
-        width: 60vw;
-        min-width: 600px;
-        margin: 0 auto;
-    }
-</style>
