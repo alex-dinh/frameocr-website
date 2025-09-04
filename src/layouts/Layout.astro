@@ -23,9 +23,40 @@ import LogoSVG from "../assets/frameocr-logo.svg";
         <link rel="icon" type="image/svg+xml" href="/frameocr.ico" />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
+        <!-- Needs is:inline to work! applies to all scripts outside src/ folder -->
+        <script is:inline src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+        <script type="text/javascript">
+            Paddle.Environment.set("sandbox");
+            Paddle.Setup({
+                token: 'test_3f1acdab3b045b2afe4f146f57d' // this is the sandbox client-side token
+            });
+
+            // define items
+            let standardList = [
+                {
+                    priceId: "pri_01k498zbr1fwd8dstays5qv4p5",
+                    quantity: 1,
+                },
+            ];
+
+            let patronList = [
+                {
+                    priceId: "pri_01k4akggceqmwe0mm6w8gwht53",
+                    quantity: 1
+                }
+            ];
+
+            // open checkout
+            function openCheckout(items) {
+                Paddle.Checkout.open({
+                    items: items,
+                });
+            }
+        </script>
     </head>
-    <!-- Top Navigation Bar -->
-    <body>
+    
+    <body class="flex flex-col min-h-screen">
+        <!-- Header / Top Navigation Bar -->
         <div class="navbar bg-base-200">
             <div class="navbar-start" id="header-logo">
                 <a href="/" class="btn btn-ghost px-2 py-1 h-auto min-h-0">
@@ -55,11 +86,11 @@ import LogoSVG from "../assets/frameocr-logo.svg";
                         tabindex="0"
                         class="menu dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
                     >
-                        <li><a href="#release-notes">Release Notes</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="/">Try for Free</a></li>
+                        <li><a href="/#release-notes">Release Notes</a></li>
+                        <li><a href="/#faq">FAQ</a></li>
+                        <li><a href="/buy">Try for Free</a></li>
                         <li>
-                            <a href="/" class="btn btn-primary mt-2">Buy Now</a>
+                            <a href="/buy" class="btn btn-primary mt-2">Buy Now</a>
                         </li>
                     </ul>
                 </div>
@@ -69,17 +100,31 @@ import LogoSVG from "../assets/frameocr-logo.svg";
             <div class="navbar-end hidden lg:flex gap-2">
                 <a href="/#release-notes" class="btn btn-ghost">Release Notes</a>
                 <a href="/#faq" class="btn btn-ghost">FAQ</a>
-                <a href="/" class="btn btn-ghost">Try for Free</a>
+                <a href="/buy" class="btn btn-ghost">Try for Free</a>
                 <div class="divider divider-horizontal mx-1"></div>
-                <a href="/" class="btn btn-primary">Buy Now</a>
+                <a href="/buy" class="btn btn-primary">Buy Now</a>
             </div>
         </div>
-
-        <main class="container mx-auto p-8">
+        
+        <!-- Main content -->
+        <!-- <main class="container mx-auto p-8"> -->
+        <main class="flex-grow container mx-auto px-4 py-8 flex flex-col">
             <slot />
         </main>
 
-        <Footer />
+        <!-- Footer -->
+        <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
+            <nav>
+            <h6 class="footer-title">Monowire Labs © 2025</h6>
+            <a class="link link-hover" href="/about">About Us</a>
+            <a class="link link-hover" href="/contact">Contact</a>
+            </nav>
+            <nav>
+            <h6 class="footer-title">Legal</h6>
+            <a class="link link-hover" href="/terms">Terms of Service</a>
+            <a class="link link-hover" href="/privacy">Privacy Policy</a>
+            </nav>
+        </footer>
     </body>
 </html>
 

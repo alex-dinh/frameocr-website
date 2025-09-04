@@ -1,4 +1,5 @@
 ---
+// src/components/Hero.astro
 import LogoSVG from '../assets/frameocr-logo.svg';
 
 ---
@@ -14,15 +15,16 @@ import LogoSVG from '../assets/frameocr-logo.svg';
         <p class="text-med font-normal">(v1.0.0, 181.5 MB)</p>
     </button> -->
     <button id="download-button" class="btn btn-primary btn-lg min-h-[4rem] flex flex-col items-center leading-tight">
-    <span>Download FrameOCR for Mac</span>
-    <span class="text-sm font-normal">(v1.0.0, 181.5 MB)</span>
+        <span>Download FrameOCR for Mac</span>
+        <span class="text-sm font-normal">(v1.0.0, 181.5 MB)</span>
     </button>
+    <a href="/buy" class="link link-hover font-semibold mt-2">Check prices</a>
 </div>
 
 <style>
     #hero-block {
-        padding-top: 125px;
-        padding-bottom: 125px;
+        padding-top: 80px;
+        padding-bottom: 70px;
     }
 
     #hero-logo {
@@ -39,7 +41,8 @@ import LogoSVG from '../assets/frameocr-logo.svg';
     }
 
     #download-button {
-        margin: 0 auto;
+        /* margin: 0 auto; */
+        margin: 0px auto 10px; /* top, sides, bottom */
         padding: 40px 60px 40px 60px;
     }
 
