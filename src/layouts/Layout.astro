@@ -6,13 +6,12 @@ interface Props {
 
 const { title } = Astro.props;
 import "../styles/global.css";
-import Footer from "../components/Footer.astro";
 import LogoSVG from "../assets/frameocr-logo.svg";
 ---
 
 <!doctype html>
 <!-- Modify theme here -->
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="emerald">
     <head>
         <meta charset="UTF-8" />
         <meta
@@ -23,36 +22,7 @@ import LogoSVG from "../assets/frameocr-logo.svg";
         <link rel="icon" type="image/svg+xml" href="/frameocr.ico" />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
-        <!-- Needs is:inline to work! applies to all scripts outside src/ folder -->
-        <script is:inline src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
-        <script type="text/javascript">
-            Paddle.Environment.set("sandbox");
-            Paddle.Setup({
-                token: 'test_3f1acdab3b045b2afe4f146f57d' // this is the sandbox client-side token
-            });
-
-            // define items
-            let standardList = [
-                {
-                    priceId: "pri_01k498zbr1fwd8dstays5qv4p5",
-                    quantity: 1,
-                },
-            ];
-
-            let patronList = [
-                {
-                    priceId: "pri_01k4akggceqmwe0mm6w8gwht53",
-                    quantity: 1
-                }
-            ];
-
-            // open checkout
-            function openCheckout(items) {
-                Paddle.Checkout.open({
-                    items: items,
-                });
-            }
-        </script>
+        <script src="https://app.lemonsqueezy.com/js/lemon.js" defer></script>
     </head>
     
     <body class="flex flex-col min-h-screen">

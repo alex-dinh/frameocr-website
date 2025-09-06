@@ -4,6 +4,8 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="FrameOCR - Pricing">
+    <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
+
     <!-- pt = padding top -->
     <h1 class="text-4xl font-bold text-center mb-12 pt-12">Purchase FrameOCR</h1> 
 
@@ -18,7 +20,7 @@ import Layout from "../layouts/Layout.astro";
                 <p class="text-3xl font-bold">
                     $0 <span class="text-lg font-normal">/ Lifetime</span>
                 </p>
-                <p class="mb-4">1 Standalone license</p>
+
                 <button class="btn btn-primary btn-wide mx-auto"
                     >Download</button
                 >
@@ -40,11 +42,15 @@ import Layout from "../layouts/Layout.astro";
                 <p class="text-3xl font-bold">
                     $30 <span class="text-lg font-normal">/ Lifetime</span>
                 </p>
-                <p class="mb-4">1 Standalone license</p>
-                <button
+
+                <!-- <button
                     class="btn btn-primary btn-wide mx-auto"
                     onclick="openCheckout(standardList)">Buy now</button
-                >
+                > -->
+                <a href="https://monowire.lemonsqueezy.com/buy/ed88a7a5-e685-4fc4-81ea-d104284b86c3?embed=1" 
+                   class="lemonsqueezy-button btn btn-primary btn-wide mx-auto">
+                   Buy Now
+                </a>
                 <p class="mt-6 text-sm">
                     For those who like the app and want to support my
                     development efforts. License required for commerical use.
@@ -63,16 +69,21 @@ import Layout from "../layouts/Layout.astro";
                 <p class="text-3xl font-bold">
                     $60 <span class="text-lg font-normal">/ Lifetime</span>
                 </p>
-                <p class="mb-4">1 Standalone license</p>
-                <button
+
+                <!-- <button
                     class="btn btn-primary btn-wide mx-auto"
                     onclick="openCheckout(patronList)"
                 >
                     Buy now
-                </button>
+                </button> -->
+
+                <a href="https://monowire.lemonsqueezy.com/buy/97224c94-a352-4b48-bb79-3bcf5e0c402b?embed=1" 
+                    class="lemonsqueezy-button btn btn-primary btn-wide mx-auto">
+                    Buy Now
+                </a>
                 <p class="mt-6 text-sm">
-                    For those who <i>really</i> like the app. You'll get early access
-                    to new features and priority for feature requests!
+                    For those who <i>love</i> the app and want to show some extra support. You'll get early access
+                    to new features!
                 </p>
                 <!-- <a href="#" class="link link-hover font-semibold text-primary mt-2">Get volume discount →</a> -->
             </div>
