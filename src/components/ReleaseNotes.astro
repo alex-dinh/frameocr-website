@@ -1,39 +1,88 @@
 ---
 // src/components/ReleaseNotes.astro
+const releases = [
+{
+    date: "2025-09-17",
+    version: "v1.2.1",
+    description: [
+    "Added support for Japanese, Chinese, and Korean vertical text.",
+    "Added support for Vietnamese and Thai.",
+    "Added 'About' section in settings.",
+    "Added a button under General Settings to reset all settings and keyboard shortcuts. Does not affect license settings",
+    "Further improvements for LaTeX processing.",
+    // "Fixed a bug in the settings where selecting a language would put a keyboard shortcut into edit mode.",
+    "Fixed a bug where running OCR multiple times too quickly would cause the app to crash."
+    ]
+},
+{
+    date: "2025-09-14",
+    version: "v1.1.1",
+    description: [
+    "Added support for Russian, Belarusian, Ukrainian, and Korean.",
+    "Added a small pop-up notification window that shows scanned text after running OCR (goes away after 5 seconds, like normal macOS notifications).",
+    "Improved processing for LaTeX operators (sup, inf, Pr, log, ln, lim, det, dim, exp, max, min, sin, cos, tan, csc, sec, cot).",
+    "Updated the app + menubar icons."
+    ]
+},
+{
+    date: "2025-09-10",
+    version: "v1.0.0",
+    description: ["Initial public release of FrameOCR."]
+}
+];
 ---
 
 <div id="release-notes" class="block landing-section">
-	<h1 class="text-3xl font-bold mb-6 text-center">Release Notes</h1>
-	<div class="overflow-x-auto">
-		<table class="table table-zebra w-full">
-			<thead>
-				<tr>
-					<th class="w-30">Date</th>
-					<th>Release Version</th>
-					<th>Version Description</th>
-				</tr>
-			</thead>
+    <h1 class="text-3xl font-bold mb-6 text-center">Release Notes</h1>
+    
+    <!-- Desktop table -->
+    <div class="overflow-x-auto hidden md:block">
+        <table class="table table-zebra w-full">
+            <thead>
                 <tr>
-					<td>2025-09-14</td>
-					<td>v1.1.1</td>
-					<td>
-                        <li>Added support for Russian, Belarusian, Ukrainian, and Korean. </li>
-                        <li>Added a small pop-up notification window that shows scanned text after running OCR (goes away 
-                        after 5 seconds, like normal macOS notifications).</li>
-                        <li>
-                            Added improved processing for certain LaTeX operators 
-                            (\sup, \inf, \Pr, \log, \ln, \lim, \det, \dim, \exp, \max, \min,
-                            \sin, \cos, \tan, \csc, \sec, \cot).
-                        </li>
-                        <li>Updated the app + menubar icons</li>
-                    </td>
-				</tr>
-        		<tr>
-					<td>2025-09-10</td>
-					<td>v1.0.0</td>
-					<td>Initial public release of FrameOCR.</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-</div>
+                    <th>Release Version</th>
+                    <th class="w-30">Date</th>
+                    <th>Version Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {releases.map(r => (
+                    <tr>
+                        <td>{r.version}</td>
+                        <td>{r.date}</td>
+                        <td>
+                            {r.description.length > 1 ? (
+                                <ul class="list-disc ml-5">
+                                    {r.description.map(d => <li>{d}</li>)}
+                                </ul>
+                                ) : (
+                                r.description[0]
+                                )}
+                            </td>
+                        </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Mobile card view -->
+            <div class="space-y-4 md:hidden">
+                {releases.map(r => (
+                    <div class="border rounded-lg p-4 shadow-sm">
+                        <p><span class="font-semibold">Release Version:</span> {r.version}</p>
+                        <p><span class="font-semibold">Date:</span> {r.date}</p>
+                        <div>
+                            <span class="font-semibold">Version Description:</span>
+                            {r.description.length > 1 ? (
+                                <ul class="list-disc ml-5 mt-2">
+                                    {r.description.map(d => <li>{d}</li>)}
+                                </ul>
+                                ) : (
+                                <p class="mt-1">{r.description[0]}</p>
+                                )}
+                            </div>
+                        </div>
+                        ))}
+                    </div>
+                </div>
+                
