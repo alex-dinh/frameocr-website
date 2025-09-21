@@ -4,7 +4,7 @@ import type { APIRoute } from 'astro'
 export const GET: APIRoute = () => {
     const data = {
         info: 'FrameOCR Latest Version',
-        version: '1.2.0'
+        version: '1.2.2'
     }
     
     return new Response(JSON.stringify(data), {

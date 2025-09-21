@@ -1,5 +1,6 @@
 ---
 // src/components/Hero.astro
+// import { Image } from 'astro:assets';
 import LogoSVG from '../assets/frameocr-logo.svg';
 
 ---
@@ -7,13 +8,13 @@ import LogoSVG from '../assets/frameocr-logo.svg';
 <div id="hero-block" class="flex flex-col items-center text-center">
     <LogoSVG id="hero-logo"/>
     <p id="hero-text" class="py-0 mb-8">
-        Instantly recognize and extract text and LaTeX from images and documents on your Mac.
+        Instantly extract text and LaTeX math from images and documents on your Mac.
         State-of-the-art OCR performance powered by AI, tailored for each use case.
     </p>
-    <a href="https://downloads.frameocr.com/FrameOCR_1.2.1.dmg">
+    <a href="https://downloads.frameocr.com/FrameOCR_1.2.2.dmg">
     <button id="download-button" class="btn btn-primary btn-lg min-h-[4rem] flex flex-col items-center leading-tight --color-primary">
         <span>Download FrameOCR for Mac</span>
-        <span class="text-sm font-normal">(v1.2.1, 215.1 MB)</span>
+        <span class="text-sm font-normal">(v1.2.2, 215.1 MB)</span>
     </button>
     </a>
     <a href="/buy" class="link link-hover font-semibold mt-2">Check prices</a>
@@ -56,5 +57,6 @@ import LogoSVG from '../assets/frameocr-logo.svg';
         .divider {
             width: 90%;
         }
+
     }
 </style>

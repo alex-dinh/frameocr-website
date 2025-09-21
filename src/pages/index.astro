@@ -2,6 +2,7 @@
 // src/pages/index.astro
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
 import DemoVideo from '../components/DemoVideo.astro';
 import ReleaseNotes from '../components/ReleaseNotes.astro';
 import FAQ from '../components/FAQ.astro';
@@ -9,10 +10,12 @@ import FAQ from '../components/FAQ.astro';
 
 <Layout title="FrameOCR">
 	<Hero />
-     <div class="hdivider"></div>
+    <div class="hdivider"></div>
+    <Features/>
+    <div class="hdivider"></div>
     <DemoVideo/>
-     <div class="hdivider"></div>
+    <div class="hdivider"></div>
     <ReleaseNotes/>
-     <div class="hdivider"></div>
+    <div class="hdivider"></div>
     <FAQ/>
 </Layout>

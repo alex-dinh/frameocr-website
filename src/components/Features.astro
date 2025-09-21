@@ -1,0 +1,56 @@
+---
+// src/components/Features.astro
+import { Image, Picture } from 'astro:assets';
+import GeneralSettings from '../assets/General Settings@4x.png';
+import CJK from '../assets/CJK Vertical Support@4x.png';
+---
+
+<div id="features" class="space-y-6 landing-section">
+    <h1 class="text-3xl font-bold mb-2 text-center">Features</h1>
+    <!-- Keen-slider Carousel -->
+    <!-- <div class="keen-slider" id="my-keen-slider">
+        <div class="keen-slider__slide slide1">
+            <Picture src={GeneralSettings} alt="FrameOCR general settings UI." quality={100} class="feature-image"/>
+        </div>
+        <div class="keen-slider__slide slide2">
+            <Picture src={CJK} alt="FrameOCR CJK vertical text UI." quality={100} class="feature-image"/>
+        </div>
+        <div class="keen-slider__slide slide3">Slide 3</div>
+        <div class="keen-slider__slide slide4">Slide 4</div>
+    </div> -->
+     <!-- End Carousel -->
+    <Picture src={GeneralSettings} alt="FrameOCR general settings UI." quality={100} class="feature-image"/>
+    <Picture src={CJK} alt="FrameOCR CJK vertical text UI." quality={100} class="feature-image"/>
+
+
+    
+</div>
+
+<style>
+    .feature-image {
+        margin: 0 auto;
+        padding: 15px;
+        border-radius: 25px; /* Adjust the radius as needed */
+        width: 80%;
+    }
+    
+    @media (max-width: 1000px) {
+        #settings-image {
+            width: 100%;
+        }
+    }
+</style>
+
+<script>
+    import KeenSlider from "keen-slider"
+    
+    if (typeof window !== "undefined") {
+        const slider = new KeenSlider("#my-keen-slider", {
+            loop: true,
+            slides: {
+                perView: 1,
+                spacing: -10,
+            },
+        })
+    }
+</script>

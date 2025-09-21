@@ -15,6 +15,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
     "astro": "^5.12.8",
+    "keen-slider": "^6.8.6",
     "tailwindcss": "^4.1.11",
     "theme-change": "^2.5.0"
   },
