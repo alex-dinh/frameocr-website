@@ -28,6 +28,15 @@ themes: emerald --default;
     padding: 2px;
 }
 
+.hdivider-small {
+    background-color: #0000001a;
+    width: 80px;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding: 1px;
+}
+
 .info-page {
     width: 50%;
     margin: 0 auto;

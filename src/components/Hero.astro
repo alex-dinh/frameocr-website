@@ -2,7 +2,7 @@
 // src/components/Hero.astro
 // import { Image } from 'astro:assets';
 import LogoSVG from '../assets/frameocr-logo.svg';
-
+import MacAppStoreBadgeSVG from '../assets/mac-app-store-badge.svg'
 ---
 
 <div id="hero-block" class="flex flex-col items-center text-center">
@@ -18,6 +18,11 @@ import LogoSVG from '../assets/frameocr-logo.svg';
     </button>
     </a>
     <a href="/buy" class="link link-hover font-semibold mt-2">Check prices</a>
+    <div class="hdivider-small"></div>
+    <p class="hero-text mt-10">Also available on the Mac App Store:</p>
+    <a href="https://apps.apple.com/us/app/frameocr/id6753725982?mt=12" class="mt-6 scale-120">
+        <MacAppStoreBadgeSVG />
+    </a>
 </div>
 
 <style>
