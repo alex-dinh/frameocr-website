@@ -48,46 +48,6 @@ import Layout from '../layouts/Layout.astro';
         User should consult the refund policy of that platform.
       </p>
     </div>
-
-    <!-- <div>
-      <h2 class="text-xl font-semibold">3. Image Uploading Functionality</h2>
-      <p class="mt-2">
-        The image uploading feature is intended for sharing static screen-size screenshots 
-        with private parties.
-      </p>
-      <p class="mt-2">
-        Uploaded images become public and should be treated as such. Anyone who finds, guesses, 
-        or otherwise obtains an image URL can see the uploaded image.
-      </p>
-      <p class="mt-2">The image uploading feature should not be used for the following purposes:</p>
-      <ul class="list-disc list-inside mt-2 space-y-1">
-        <li>Hosting static images embedded elsewhere.</li>
-        <li>Sharing images that are not screenshots.</li>
-        <li>Sharing private or sensitive information.</li>
-      </ul>
-      <p class="mt-2">You agree not to upload and/or share images containing the following content:</p>
-      <ul class="list-disc list-inside mt-2 space-y-1">
-        <li>Private or sensitive information.</li>
-        <li>Images that are illegal or violate any United States laws.</li>
-        <li>Pornography, adult, mature, or obscene content.</li>
-        <li>Images protected by intellectual property laws, unless you own or control the rights.</li>
-        <li>Violent images of any kind.</li>
-        <li>Images promoting hatred of any kind.</li>
-        <li>Images depicting or otherwise promoting drugs.</li>
-        <li>Content that promotes illegal activity.</li>
-        <li>Content that can be potentially malicious.</li>
-      </ul>
-      <p class="mt-2">
-        Uploading such images will be considered abuse and will result in revoking the uploading privileges. 
-        Company will use its discretion to determine if any given image falls under any of the categories above.
-      </p>
-      <p class="mt-2">
-        Every uploaded image will be moderated, both automatically and manually. If the image is deemed inappropriate, 
-        it may be removed without notice.
-      </p>
-      <p class="mt-2">Company provides no guarantee regarding image storage time and availability.</p>
-    </div> -->
-
     <div>
       <h2 class="text-xl font-semibold">3. Intellectual Property Rights</h2>
       <p class="mt-2">
@@ -143,10 +103,19 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-  #terms {
+#terms {
     width: 35vw;
     min-width: 550px;
     margin: 0 auto;
     padding: 20px;
-  }
+}
+
+  /* For mobile screens */
+@media (max-width: 1000px) {
+    #terms {
+        width: 92vw;
+        min-width: 50px;
+        padding: 5px;
+    }
+}
 </style>
