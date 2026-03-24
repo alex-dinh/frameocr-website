@@ -14,7 +14,12 @@ themes: emerald --default;
 
 
 .landing-section {
-    width: 50%;
+    width: 60%;
+    margin: 0 auto;
+}
+
+#release-notes {
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -46,6 +51,10 @@ themes: emerald --default;
 /* For mobile screens */
 @media (max-width: 1000px) {
     .landing-section {
+        width: 90%;
+    }
+
+    #release-notes {
         width: 90%;
     }
     

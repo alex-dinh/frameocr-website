@@ -2,6 +2,17 @@
 // src/components/ReleaseNotes.astro
 const releases = [
 {
+    date: "2026-3-24",
+    version: "v2.0.0",
+    description: [
+    "Added document analysis mode: uses a lightweight VLM to parse any mix of text, math equations, and tables from documents all at once. Runs entirely locally.",
+    "Added loading badge during document analysis OCR processing.",
+    "Instead of hovering the mouse over each setting to view tooltips, dedicated tooltip buttons were added.",
+    "Added 'Ignore line breaks' setting to menubar dropdown for single-language OCR mode.",
+    "Updated codebase to Swift 6."
+    ]
+},
+{
     date: "2025-10-07",
     version: "v1.2.3",
     description: [
@@ -25,7 +36,6 @@ const releases = [
     "Added 'About' section in settings.",
     "Added a button under General Settings to reset all settings and keyboard shortcuts. Does not affect license settings",
     "Further improvements for LaTeX processing.",
-    // "Fixed a bug in the settings where selecting a language would put a keyboard shortcut into edit mode.",
     "Fixed a bug where running OCR multiple times too quickly would cause the app to crash."
     ]
 },
@@ -47,7 +57,7 @@ const releases = [
 ];
 ---
 
-<div id="release-notes" class="block landing-section">
+<div id="release-notes" class="block release-notes-section">
     <h1 class="text-3xl font-bold mb-6 text-center">Release Notes</h1>
     
     <!-- Desktop table -->
