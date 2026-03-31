@@ -1,19 +1,32 @@
 ---
 // src/components/DemoVideo.astro
+import {YouTube} from 'astro-lazy-youtube-embed'
 ---
 <div id="demo-video-wrapper" class="space-y-6 landing-section">
     <h1 class="text-3xl font-bold mb-6 text-center">Document Analysis Mode:</h1>
-    <h3 class="text-1xl mt-0 mb-6 text-center">Mixed Text and Math, Multiple Languages, and Table Recognition</h3>
-    <div>
-    <video id="demo-video" src="/Doc-Analysis-Use-Cases.mp4" controls class="w-[50vw] rounded-lg shadow-lg"></video>
-    </div>
+    <h3 class="text-1xl mt-0 mb-6 text-center">Mixed Text and Math, Multiple Target Languages, and Table Recognition</h3>
+    <!-- <div> -->
+    <!-- <video id="demo-video" src="https://www.youtube.com/embed/HI4ED2GQTwo" controls class="w-[50vw] rounded-lg shadow-lg"></video> -->
+    <!-- </div> -->
+
+
+    <YouTube
+        title="FrameOCR Document Analysis Mode"
+        videoId="lEujFhvotC0"
+    />
 
     <h1 class="text-3xl font-bold mb-6 text-center">Basic Features:</h1>
     <h3 class="text-1xl mt-0 mb-6 text-center">Single Target Language and LaTeX Math Recognition</h3>
     
-    <div>
+    <!-- <div>
     <video id="demo-video" src="/V1-Use-Cases.mp4" controls class="w-[50vw] rounded-lg shadow-lg"></video>
-    </div>
+    </div> -->
+
+    <YouTube
+        title="FrameOCR Basic Use Cases"
+        videoId="iDnPkviZqMU"
+    />
+
 </div>
 
 <style>
@@ -30,7 +43,7 @@
     /* For mobile screens */
     @media (max-width: 1000px) {
         #demo-video {
-            width: 95%; */
+            width: 95%;
             min-width: auto; /* allow shrinking */
         }
     }
